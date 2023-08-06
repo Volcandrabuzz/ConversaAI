@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ConversaAI</string>
+    <string name="title_activity_starting1">starting1</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="todo">TODO</string>
+    <string name="button">Button</string>
+    <string name="todo1">TODO</string>
+    <string name="textview">TextView</string>
+    <string name="text">Text</string>
+    <string name="start_the_bot">Start the Bot</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+</resources>
