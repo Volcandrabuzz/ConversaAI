@@ -17,4 +17,15 @@
     <string name="start_the_bot">Start the Bot</string>
     <string name="type_a_message">Type a message</string>
     <string name="let_s_get_started">Let\'s Get Started</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="name">Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="register_">Register</string>
+    <string name="login">Login</string>
+    <string name="login_">Login</string>
 </resources>

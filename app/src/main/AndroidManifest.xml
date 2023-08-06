@@ -12,6 +12,12 @@
         android:theme="@style/Theme.Electrothon"
         tools:targetApi="31">
         <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
             android:name=".loginorsignup"
             android:exported="false" />
         <activity

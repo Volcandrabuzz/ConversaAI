@@ -19,7 +19,7 @@ public class SpalshScreen extends AppCompatActivity {
             super.onCreate(savedInstanceState);
 
             Intent i;
-            i=new Intent(SpalshScreen.this,MainActivity.class);
+            i=new Intent(SpalshScreen.this, loginorsignup.class);
 
             new Handler().postDelayed(() -> {
                 startActivity(i);
@@ -28,7 +28,7 @@ public class SpalshScreen extends AppCompatActivity {
                 la.setRepeatCount(ValueAnimator.INFINITE);
                 finish();
 
-            }, 6000);
+            }, 5000);
             getSupportActionBar();
             setContentView(R.layout.activity_spalsh_screen);
 

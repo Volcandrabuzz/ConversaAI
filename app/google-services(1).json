@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "814478462913",
+    "project_id": "conversaai-ff7d8",
+    "storage_bucket": "conversaai-ff7d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814478462913:android:d6df8703fa3677e3a8e940",
+        "android_client_info": {
+          "package_name": "com.example.electrothon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814478462913-ihf0ugk0qse00g862fdnsulqm2eab21q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4cVdJ2IDxn3ndCtV5_JowVIvdlCfbzms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814478462913-ihf0ugk0qse00g862fdnsulqm2eab21q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
