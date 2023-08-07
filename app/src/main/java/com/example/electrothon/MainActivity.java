@@ -118,39 +118,7 @@ public class MainActivity extends AppCompatActivity {
         catch(JSONException e){
             throw new RuntimeException(e);
         }
-        RequestBody body = RequestBody.create(jsonObject.toString(),JSON);
-        Request request = new Request.Builder()
-                .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization","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")
-                .post(body)
-                .build();
-
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                addResponse("Fail to Load Response due to"+e.getMessage());
-
-            }
-
-            @Override
-            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                if(response.isSuccessful()){
-                    try{
-                        JSONObject jsonObject=new JSONObject(response.body().string());
-                        JSONArray jsonArray;
-                        jsonArray=jsonObject.getJSONArray("choices");
-                        String result=jsonArray.getJSONObject(0).getJSONObject("message").getString("content");
-                        addResponse(result.trim());
-                    }catch(JSONException e){
-                        throw new RuntimeException(e);
-                    }
-                }
-                else{
-                    addResponse("Failed to response due to" + response.body().string().trim());
-                }
-
-            }
-        });
+        
 
 
     }
