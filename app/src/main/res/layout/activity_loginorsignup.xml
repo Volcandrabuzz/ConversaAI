@@ -57,7 +57,7 @@
             android:layout_height="290dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/second"
+            app:lottie_rawRes="@raw/bot"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="4dp"
             tools:layout_editor_absoluteY="182dp" />
@@ -116,7 +116,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/Register"
+            android:id="@+id/register"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"

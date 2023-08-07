@@ -9,12 +9,13 @@
     android:layout_gravity="center"
     android:layout_marginTop="@dimen/loginViewsMargin"
     android:layout_marginBottom="@dimen/loginViewsMargin"
-    android:background="@color/whiteCardColor">
+    android:background="@color/loginBkColor">
 
     <LinearLayout
         style="@style/linearParent"
         android:layout_gravity="center"
-        android:padding="@dimen/loginViewsMargin">
+        android:padding="@dimen/loginViewsMargin"
+        android:background="@color/white">
 
 
 
@@ -36,7 +37,7 @@
                 android:autofillHints="name"
                 android:background="@drawable/round_border"
                 android:hint="@string/name"
-                android:textColor="@color/black"
+                android:textColor="@color/background"
                 android:inputType="text"
                 android:maxLines="1"
                 android:textSize="15sp"
@@ -53,7 +54,7 @@
                 style="@style/modifiedEditText"
                 android:autofillHints="phone"
                 android:background="@drawable/round_border"
-                android:hint="@string/mobile_number"
+                android:hint="@string/login_email_hint"
                 android:inputType="text"
                 android:textColor="@color/black"
                 android:maxLines="1"
@@ -74,7 +75,7 @@
                 android:autofillHints="emailAddress"
                 android:textColor="@color/black"
                 android:background="@drawable/round_border"
-                android:hint="@string/login_email_hint"
+                android:hint="@string/mobile_number"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textSize="15sp"

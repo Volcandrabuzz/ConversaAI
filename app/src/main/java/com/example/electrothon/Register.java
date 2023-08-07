@@ -40,7 +40,7 @@ public class Register extends AppCompatActivity {
         email=findViewById(R.id.email);
         mobile=findViewById(R.id.mobile);
         password=findViewById(R.id.password);
-        register=findViewById(R.id.Register);
+        register=findViewById(R.id.btnregister);
         progressBar=findViewById(R.id.bar);
         mAuth=FirebaseAuth.getInstance();
         db=FirebaseFirestore.getInstance();
@@ -121,5 +121,11 @@ public class Register extends AppCompatActivity {
         }
 
         return true;
+    }
+    @Override
+    public void onBackPressed(){
+        Intent intent=new Intent(Register.this,loginorsignup.class);
+        startActivity(intent);
+        finish();
     }
 }

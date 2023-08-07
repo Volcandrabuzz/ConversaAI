@@ -30,4 +30,5 @@
     <string name="login_">Login</string>
     <string name="login_1">LOGIN</string>
     <string name="register_1">Register</string>
+    <string name="conversa_ai">Conversa AI</string>
 </resources>

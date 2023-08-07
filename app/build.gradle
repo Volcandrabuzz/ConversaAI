@@ -66,6 +66,9 @@ dependencies {
     implementation "com.google.firebase:firebase-auth"
     implementation "com.google.firebase:firebase-firestore"
 
+    //okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+
 
 
 

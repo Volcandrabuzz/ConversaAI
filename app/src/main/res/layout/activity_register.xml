@@ -17,7 +17,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
-                android:weightSum="12">
+                android:weightSum="12"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     style="@style/parent"
@@ -28,7 +29,8 @@
                     <ImageView
                         style="@style/parent"
                         android:background="@drawable/ic_login_bk"
-                        android:contentDescription="login background" />
+                        android:contentDescription="login background"
+                        tools:ignore="ImageContrastCheck" />
 
                 </LinearLayout>
 
@@ -59,15 +61,14 @@
                     app:layout_constraintStart_toStartOf="parent"/>
 
 
-
-
                 <TextView
                     style="@style/headerText"
                     android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
                     android:text="CHATTERBOT"
+                    android:textColor="#EBEFF1"
                     android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="30dp"/>
+                    android:textStyle="bold" />
 
                 <include
                     layout="@layout/activity_layout_register"/>
