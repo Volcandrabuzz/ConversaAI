@@ -1,24 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
-    tools:context=".ChatActivity">
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/left_chatView"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/round_border"
+        android:backgroundTint="#09CFE8"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/left_chat_text_view"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </LinearLayout>
 
-    <com.samsao.messageui.views.MessagesWindow
-        android:id="@+id/customized_messages_window"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:balloonMargins="20dp"
-        app:thatBalloonBackground="@drawable/background_sent_message"
-        app:thatBalloonTextColor="@android:color/white"
-        app:thisBalloonBackground="@drawable/background_received_message"
-        app:thisBalloonTextColor="@android:color/white"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/right_chatView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:background="@drawable/round_border"
+        android:backgroundTint="#CDDC39"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_chat_text_view"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    
+
+</RelativeLayout>
 
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+

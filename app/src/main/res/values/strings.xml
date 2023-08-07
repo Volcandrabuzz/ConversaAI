@@ -28,4 +28,6 @@
     <string name="register_">Register</string>
     <string name="login">Login</string>
     <string name="login_">Login</string>
+    <string name="login_1">LOGIN</string>
+    <string name="register_1">Register</string>
 </resources>
