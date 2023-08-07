@@ -43,6 +43,19 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp">
 
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:id="@+id/bar"
+                    android:visibility="invisible"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:indeterminate="true"
+                    android:progressTint="@color/background"
+                    android:indeterminateTint="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
 
                 <TextView
                     style="@style/headerText"

@@ -75,6 +75,7 @@
 
         <TextView
             style="@style/parent"
+            android:id="@+id/Register_u"
             android:layout_marginTop="@dimen/loginViewsMargin"
             android:text="@string/login_signup_hint"
             android:textAlignment="center"

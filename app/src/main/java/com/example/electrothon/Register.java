@@ -1,7 +1,6 @@
 package com.example.electrothon;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -9,8 +8,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Register extends AppCompatActivity {
 
@@ -22,6 +28,8 @@ public class Register extends AppCompatActivity {
     String emailpattern="[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
     FirebaseAuth mAuth;
+
+    FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,18 +42,24 @@ public class Register extends AppCompatActivity {
         password=findViewById(R.id.password);
         register=findViewById(R.id.Register);
         progressBar=findViewById(R.id.bar);
+        mAuth=FirebaseAuth.getInstance();
+        db=FirebaseFirestore.getInstance();
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fullname=name.getText().toString();
-                fullemail=email.getText().toString();
-                fullmobile=mobile.getText().toString();
-                fullpassword=password.getText().toString();
+        login.setOnClickListener(view -> {
 
-                if (isValidate()){
-                    Register();
-                }
+            Intent intent=new Intent(Register.this, login.class);
+            startActivity(intent);
+
+        });
+
+        register.setOnClickListener(view -> {
+            fullname=name.getText().toString();
+            fullemail=email.getText().toString();
+            fullmobile=mobile.getText().toString();
+            fullpassword=password.getText().toString();
+
+            if (isValidate()){
+                Register_up();
             }
         });
 
@@ -53,7 +67,32 @@ public class Register extends AppCompatActivity {
 
     }
 
-    private void Register(){
+    private void Register_up(){
+        register.setVisibility(View.INVISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
+        mAuth.createUserWithEmailAndPassword(fullemail,fullpassword).addOnSuccessListener(authResult -> {
+            Map<String,Object> user=new HashMap<>();
+            user.put("Full Name",fullname);
+            user.put("Email",fullemail);
+            user.put("Mobile",fullmobile);
+            user.put("Password",fullpassword);
+
+            db.collection("Users").document(fullemail).set(user).addOnSuccessListener(unused -> {
+                Intent intent=new Intent(Register.this, Welcome.class);
+                startActivity(intent);
+            }).addOnFailureListener(e -> {
+                Toast.makeText(Register.this,"Error - "+e.getMessage(),Toast.LENGTH_SHORT).show();
+                register.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.INVISIBLE);
+
+            });
+
+
+        }).addOnFailureListener(e -> {
+            Toast.makeText(Register.this,"Error - "+e.getMessage(),Toast.LENGTH_SHORT).show();
+            register.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.INVISIBLE);
+        });
 
     }
     private boolean isValidate(){
@@ -66,7 +105,7 @@ public class Register extends AppCompatActivity {
             email.setError("Email can't be Empty !");
             return false;
         }
-        if(fullemail.matches(emailpattern)){
+        if(!fullemail.matches(emailpattern)){
             email.setError("Enter a valid Email ID !");
             return false;
         }
@@ -81,6 +120,6 @@ public class Register extends AppCompatActivity {
             return false;
         }
 
-        return false;
+        return true;
     }
 }

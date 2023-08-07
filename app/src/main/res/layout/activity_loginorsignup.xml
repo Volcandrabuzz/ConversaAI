@@ -9,7 +9,18 @@
     tools:context=".loginorsignup">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation"
+        android:id="@+id/animation1"
+        android:layout_width="136dp"
+        android:layout_height="138dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/gaming"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation2"
         android:layout_width="136dp"
         android:layout_height="138dp"
         app:lottie_autoPlay="true"
