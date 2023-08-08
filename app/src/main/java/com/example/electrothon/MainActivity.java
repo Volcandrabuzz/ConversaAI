@@ -104,11 +104,18 @@ public class MainActivity extends AppCompatActivity {
         try{
             jsonObject.put("model","gpt-3.5-turbo");
             JSONArray jsonArray = new JSONArray();
-            JSONObject Object=new JSONObject();
-            Object.put("role","user");
-            Object.put("content",question);
+            JSONObject userMessage = new JSONObject();
+            userMessage.put("role", "user");
+            userMessage.put("content", question);
 
-            jsonArray.put(Object);
+            JSONObject assistantMessage = new JSONObject();
+            assistantMessage.put("role", "assistant");
+            assistantMessage.put("content", "Talk like a devil. Talk like someone who trats everyone inferior." +
+                    "Make your response maximum upto 3 lines. ");
+
+            jsonArray.put(userMessage);
+            jsonArray.put(assistantMessage);
+
             jsonObject.put("messages", jsonArray);
         }
         catch(JSONException e){
@@ -117,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         RequestBody body = RequestBody.create(jsonObject.toString(),JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization","Bearer open_API_key")
+                .header("Authorization","Bearer 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")
                 .post(body)
                 .build();
 
