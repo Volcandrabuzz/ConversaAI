@@ -43,4 +43,10 @@ public class Welcome extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onBackPressed(){
+        Intent intent=new Intent(Welcome.this,loginorsignup.class);
+        startActivity(intent);
+        finish();
+    }
 }

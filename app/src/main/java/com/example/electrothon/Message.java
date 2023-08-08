@@ -18,7 +18,7 @@ public class Message {
     public String getSendby(){
         return sendby;
     }
-    public void setSentBy(String sendby){
+    public void setSendby(String sendby){
         this.sendby=sendby;
     }
 

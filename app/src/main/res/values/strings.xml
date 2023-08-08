@@ -31,4 +31,6 @@
     <string name="login_1">LOGIN</string>
     <string name="register_1">Register</string>
     <string name="conversa_ai">Conversa AI</string>
+    <string name="todo_">TODO</string>
+    <string name="type">Type a message...</string>
 </resources>

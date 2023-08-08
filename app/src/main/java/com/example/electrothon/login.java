@@ -59,6 +59,8 @@ public class login extends AppCompatActivity {
                     Intent intent=new Intent(login.this, Welcome.class);
                     startActivity(intent);
                     finish();
+                    Toast.makeText(login.this,"Logged In Succesfullly",Toast.LENGTH_SHORT).show();
+
 
                 }).addOnFailureListener(e -> {
                 Toast.makeText(login.this,"Error - "+e.getMessage(),Toast.LENGTH_SHORT).show();

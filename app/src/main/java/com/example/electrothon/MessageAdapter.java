@@ -13,7 +13,6 @@ import java.util.List;
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHolder>{
     List<Message> msglist;
-    private MessageAdapter.MyViewHolder MyViewHolder;
 
     public MessageAdapter(List<Message> msglist) {
         this.msglist = msglist;
@@ -25,7 +24,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHo
 
         View chatView= LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_chat,null);
         MyViewHolder myViewHolder= new MyViewHolder(chatView);
-        return MyViewHolder;
+        return myViewHolder;
     }
 
     @Override
@@ -50,7 +49,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHo
         return msglist.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder{
 
         LinearLayout leftchat,rightchat;
         TextView leftchattext,rightchattext;
