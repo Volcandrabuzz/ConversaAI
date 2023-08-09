@@ -23,9 +23,9 @@ power of external APIs to provide relevant and dynamic content.
 - Lottie files(For 3-d animation)
 - Open API Key
 
-@Backend:
--FirebaseAuth(For authentication)
--Firestore(for storing user databse)
+@Backend:-
+- FirebaseAuth(For authentication)
+- Firestore(for storing user databse)
 
 ##Contributions
 
