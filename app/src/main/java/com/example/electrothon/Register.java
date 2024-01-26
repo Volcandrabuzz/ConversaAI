@@ -38,7 +38,7 @@ public class Register extends AppCompatActivity {
         login=findViewById(R.id.txtlogin);
         name=findViewById(R.id.name);
         email=findViewById(R.id.email);
-        mobile=findViewById(R.id.mobile);
+        mobile=findViewById(R.id.phone_number);
         password=findViewById(R.id.password);
         register=findViewById(R.id.btnregister);
         progressBar=findViewById(R.id.bar);
@@ -49,7 +49,7 @@ public class Register extends AppCompatActivity {
 
             Intent intent=new Intent(Register.this, login.class);
             startActivity(intent);
-            Toast.makeText(Register.this,"Registered Succesfullly",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Registered Succesfullly",Toast.LENGTH_SHORT).show();
 
         });
 

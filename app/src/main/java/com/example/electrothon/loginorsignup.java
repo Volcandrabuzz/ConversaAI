@@ -20,7 +20,7 @@ public class loginorsignup extends AppCompatActivity {
         login.setOnClickListener(v -> {
             Intent intent=new Intent(loginorsignup.this,login.class);
             startActivity(intent);
-            finish();
+            finish();   
         });
 
         register.setOnClickListener(v -> {

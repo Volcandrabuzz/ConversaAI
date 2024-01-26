@@ -47,20 +47,21 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/parent"
-            android:layout_marginTop="@dimen/signup_text_margin_top">
+            android:layout_marginTop="@dimen/signup_text_margin_top"
+            tools:ignore="ExtraText">
 
             <EditText
-                android:id="@+id/mobile"
+                android:id="@+id/email"
                 style="@style/modifiedEditText"
-                android:autofillHints="phone"
+                android:autofillHints="emailAddress"
                 android:background="@drawable/round_border"
                 android:hint="@string/login_email_hint"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/black"
                 android:maxLines="1"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,13 +71,13 @@
             android:layout_marginTop="@dimen/signup_text_margin_top">
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/phone_number"
                 style="@style/modifiedEditText"
-                android:autofillHints="emailAddress"
+                android:autofillHints="phone_number"
                 android:textColor="@color/black"
                 android:background="@drawable/round_border"
                 android:hint="@string/mobile_number"
-                android:inputType="textEmailAddress"
+                android:inputType="number"
                 android:maxLines="1"
                 android:textSize="15sp"
                 android:textStyle="bold"

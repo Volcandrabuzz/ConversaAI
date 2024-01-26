@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
 
+    String open_API_Key = "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";
+
 
     public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
     OkHttpClient client = new OkHttpClient();
@@ -124,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         RequestBody body = RequestBody.create(jsonObject.toString(),JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization","Bearer open_API_Key")
+                .header("Authorization","Bearer "+open_API_Key)
                 .post(body)
                 .build();
 
