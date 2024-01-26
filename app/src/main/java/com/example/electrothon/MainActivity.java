@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
 
-    String open_API_Key = "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";
+    String open_API_Key = "Your open_Api key";
 
 
     public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
